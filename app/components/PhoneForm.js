@@ -16,8 +16,25 @@ class PhoneForm extends React.Component {
   }
   render() {
     return <div>
-      <input ref={this.phoneInput} />
-      <button onClick = {this.onClick}>Добавить</button>
+      <input
+        ref={this.phoneInput}
+        style={{
+          padding: (20, 10),
+          boxSizing: 'border-box',
+          fontSize: 16,
+        }}
+      />
+      <button
+        onClick = {this.onClick}
+        style={{
+          padding: 15,
+          textAlign: 'center',
+          textDecoration: 'none',
+          display: 'inline-block',
+          margin: (10, 10),
+          fontSize: 16
+        }}
+      >Добавить</button>
     </div>
   }
 };

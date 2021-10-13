@@ -48,28 +48,64 @@ class PhoneItem extends React.Component {
 
     return <div>
       <p>
-        <b>{this.props.item}</b><br />
+        <b
+          style={{
+            fontSize: 16,
+          }}>{this.props.item}</b><br />
         <input
           value={this.state.phoneInputUpdate}
           onChange={this.onPhoneInputUpdate}
-          style={{display: this.state.displayInputUpdate}} />
+          style={{
+            display: this.state.displayInputUpdate,
+            padding: (20, 10),
+            boxSizing: 'border-box',
+            fontSize: 16,
+          }}/>
         <button
-          style={{display: this.state.displayInputUpdate}}
           onClick={this.onUpdatePhone}
+          style={{
+            padding: 15,
+            textAlign: 'center',
+            textDecoration: 'none',
+            display: this.state.displayInputUpdate,
+            margin: (10, 10),
+            fontSize: 16
+          }}
         >Обновить
         </button>
         <button
-          style={{display: this.state.displayInputUpdate}}
           onClick={this.cancelUpdate}
+          style={{
+            padding: 15,
+            textAlign: 'center',
+            textDecoration: 'none',
+            display: this.state.displayInputUpdate,
+            margin: (10, 10),
+            fontSize: 16
+          }}
         >Отмена</button>
         <button
-          style={{display: this.state.displayUpdateDeleteBtns}}
           onClick={this.clickUpdate}
+          style={{
+            padding: 15,
+            textAlign: 'center',
+            textDecoration: 'none',
+            display: this.state.displayUpdateDeleteBtns,
+            margin: (10, 10),
+            fontSize: 16
+          }}
         >Редактировать
         </button>
         <button
-          style={{display: this.state.displayUpdateDeleteBtns}}
           onClick={() => this.props.deletePhone(this.props.item)}
+          style={{
+            padding: 15,
+            textAlign: 'center',
+            textDecoration: 'none',
+            display: this.state.displayUpdateDeleteBtns,
+            margin: (10, 10),
+            fontSize: 16
+          }}
         >Удалить
         </button>
       </p>
